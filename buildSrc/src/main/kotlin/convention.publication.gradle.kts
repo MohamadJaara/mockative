@@ -1,5 +1,5 @@
 import com.vanniktech.maven.publish.SonatypeHost
-import java.util.*
+import java.util.Properties
 
 plugins {
     signing
@@ -7,30 +7,23 @@ plugins {
 }
 
 val props = Properties().apply {
-    // Load `gradle.properties`, environment variables and command-line arguments
-    project.properties.forEach { (key, value) ->
-        if (value != null) {
-            this[key] = value
-        }
-    }
-
-    // Load `local.properties`
+    project.properties.forEach { (key, value) -> value?.let { this[key] = it } }
     loadFile(project.rootProject.file("local.properties"), required = false)
-
-    // Load environment variables
     loadEnv("signing.keyId", "SIGNING_KEY_ID")
     loadEnv("signing.key", "SIGNING_KEY")
     loadEnv("signing.password", "SIGNING_PASSWORD")
-
-    loadEnv("sonatype.username", "SONATYPE_USERNAME")
-    loadEnv("sonatype.password", "SONATYPE_PASSWORD")
-    loadEnv("sonatype.repository", "SONATYPE_REPOSITORY")
 }
+
+fun prop(key: String): String? = props.getProperty(key)?.takeIf { it.isNotBlank() }
+
+val signingKeyId = prop("signing.keyId")
+val signingKey = prop("signing.key")
+val signingEnabled = signingKeyId != null && signingKey != null
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
-    if (props.getProperty("signing.keyId") != null) {
+    if (signingEnabled) {
         signAllPublications()
     }
 
@@ -43,8 +36,7 @@ mavenPublishing {
         licenses {
             license {
                 name = "MIT"
-                url = "https://github.com/mohamadjaara/mockative/LICENSE"
-                distribution = "https://github.com/mohamadjaara/mockative/LICENSE"
+                url = "https://github.com/mohamadjaara/mockative/blob/main/LICENSE"
             }
         }
 
@@ -64,19 +56,22 @@ mavenPublishing {
     }
 }
 
-if (props.getProperty("signing.keyId") != null) {
+if (signingEnabled) {
     signing {
-        useInMemoryPgpKeys(
-            props.getProperty("signing.keyId"),
-            props.getProperty("signing.key"),
-            props.getProperty("signing.password"),
-        )
-
+        val decodedKey = try {
+            String(java.util.Base64.getDecoder().decode(signingKey))
+        } catch (e: IllegalArgumentException) {
+            throw GradleException("Failed to decode signing.key from Base64: ${e.message}")
+        }
+        useInMemoryPgpKeys(signingKeyId, decodedKey, prop("signing.password"))
         sign(publishing.publications)
     }
+} else {
+    signing { isRequired = false }
+    tasks.withType<Sign>().configureEach { enabled = false }
+    logger.lifecycle("Signing disabled: signing.keyId or signing.key not provided")
 }
 
-// Add local release repository
 publishing {
     repositories {
         maven {
