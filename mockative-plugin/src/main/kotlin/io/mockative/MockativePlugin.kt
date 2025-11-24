@@ -66,6 +66,13 @@ abstract class MockativePlugin : Plugin<Project> {
             }
         }
 
+        // Add JVM dependencies early to avoid Gradle configuration locking issues
+        // These are needed for reflection and bytecode manipulation
+        project.addJVMDependencies("jvmMain", "mockative plugin initialization")
+        if (project.isMultiplatform) {
+            project.addJVMDependencies("androidMain", "mockative plugin initialization")
+        }
+
         // Pass extension configuration to symbol processor through KSP `arg`s
         project.afterEvaluate {
             project.extensions.configure(KspExtension::class.java) { ksp ->
@@ -77,18 +84,6 @@ abstract class MockativePlugin : Plugin<Project> {
 
                 val stubsUnitByDefault = mockative.stubsUnitByDefault.get()
                 ksp.arg("io.mockative:mockative:stubsUnitByDefault", "$stubsUnitByDefault")
-            }
-
-            // Modifying dependencies for Android targets at task action time is prohibited, so we use this deduction
-            // during configuration time to do a "best effort" of adding JVM dependencies for Android targets as needed.
-            if (project.isMockativeEnabled) {
-                project.addJVMDependencies("androidMain", "the Gradle property 'io.mockative.enabled=true'")
-            } else if (project.isRunningTestPrefix) {
-                project.addJVMDependencies("androidMain", "task with 'test' prefix detected")
-            } else if (project.isRunningTestSuffix) {
-                project.addJVMDependencies("androidMain", "task with 'Test' suffix detected")
-            } else if (project.isRunningTestsSuffix) {
-                project.addJVMDependencies("androidMain", "task with 'Tests' suffix detected")
             }
         }
     }

@@ -18,7 +18,7 @@ kotlin {
                 implementation(kotlin("stdlib"))
 
                 // KSP
-                implementation("com.google.devtools.ksp:symbol-processing-api:2.0.21-1.0.26")
+                implementation("com.google.devtools.ksp:symbol-processing-api:2.2.21-2.0.4")
 
                 // KotlinPoet
                 implementation("com.squareup:kotlinpoet:1.18.1")

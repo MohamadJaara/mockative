@@ -30,7 +30,9 @@ val props = Properties().apply {
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
-    signAllPublications()
+    if (props.getProperty("signing.keyId") != null) {
+        signAllPublications()
+    }
 
     pom {
         name = "Mockative"
@@ -62,12 +64,24 @@ mavenPublishing {
     }
 }
 
-signing {
-    useInMemoryPgpKeys(
-        props.getProperty("signing.keyId"),
-        props.getProperty("signing.key"),
-        props.getProperty("signing.password"),
-    )
+if (props.getProperty("signing.keyId") != null) {
+    signing {
+        useInMemoryPgpKeys(
+            props.getProperty("signing.keyId"),
+            props.getProperty("signing.key"),
+            props.getProperty("signing.password"),
+        )
 
-    sign(publishing.publications)
+        sign(publishing.publications)
+    }
+}
+
+// Add local release repository
+publishing {
+    repositories {
+        maven {
+            name = "GitHubRelease"
+            url = uri("${project.rootProject.projectDir}/release")
+        }
+    }
 }
