@@ -4,7 +4,17 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.mockative/mockative)](https://search.maven.org/artifact/io.mockative/mockative)
 
-> [!IMPORTANT]  
+> [!CAUTION]
+> **This is a temporary maintenance fork.** The original Mockative library is no longer actively maintained.
+> This fork exists solely to provide a working version while users migrate to an alternative.
+>
+> **We strongly recommend migrating to [Mokkery](https://github.com/lupuuss/Mokkery)**, which is actively maintained
+> and provides similar mocking capabilities for Kotlin Multiplatform.
+>
+> This fork will only receive critical bug fixes and compatibility updates. No new features will be added.
+> **Support for this fork may end at any time without notice.**
+
+> [!IMPORTANT]
 > Mockative 3 now supports Kotlin 2! A new Gradle plugin has been introduced to make mocking much simpler in
 > Mockative 3. Please take the time to read through this README if you're upgrading from Mockative 2, and follow the
 > [Migrating to Mockative 3](wiki/MIGRATING-TO-3.md) guide for a successful migration.
