@@ -46,14 +46,14 @@ tasks.whenObjectAdded {
 }
 
 gradlePlugin {
-    website = "https://github.com/mockative/mockative"
-    vcsUrl = "https://github.com/mockative/mockative.git"
+    website = "https://github.com/mohamadjaara/mockative"
+    vcsUrl = "https://github.com/mohamadjaara/mockative.git"
 
     plugins {
         create("mockative") {
-            id = "io.mockative"
-            displayName = "Mockative Gradle Plugin"
-            description = "Gradle Plugin for Mockative"
+            id = "io.github.mohamadjaara.mockative"
+            displayName = "Mockative Gradle Plugin (Fork)"
+            description = "Gradle Plugin for Mockative (Fork)"
             tags = listOf("testing", "mocking", "mock", "kmp", "native")
             implementationClass = "io.mockative.MockativePlugin"
         }

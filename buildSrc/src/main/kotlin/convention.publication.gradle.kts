@@ -36,30 +36,30 @@ mavenPublishing {
 
     pom {
         name = "Mockative"
-        description = "Mocking framework for Kotlin, Kotlin/Native and Kotlin Multiplatform"
+        description = "Mocking framework for Kotlin, Kotlin/Native and Kotlin Multiplatform (Fork)"
         inceptionYear = "2021"
-        url = "http://mockative.io"
+        url = "https://github.com/mohamadjaara/mockative"
 
         licenses {
             license {
                 name = "MIT"
-                url = "https://github.com/mockative/mockative/LICENSE"
-                distribution = "https://github.com/mockative/mockative/LICENSE"
+                url = "https://github.com/mohamadjaara/mockative/LICENSE"
+                distribution = "https://github.com/mohamadjaara/mockative/LICENSE"
             }
         }
 
         developers {
             developer {
-                id = "Nillerr"
-                name = "Nicklas Jensen"
-                email = "nicklas@mockative.io"
+                id = "mohamadjaara"
+                name = "Mohamad Jaara"
+                email = "mohamadjaara@users.noreply.github.com"
             }
         }
 
         scm {
-            url = "https://github.com/mockative/mockative"
-            connection = "scm:git:git://github.com/mockative/mockative.git"
-            developerConnection = "scm:git:ssh://github.com/mockative/mockative.git"
+            url = "https://github.com/mohamadjaara/mockative"
+            connection = "scm:git:git://github.com/mohamadjaara/mockative.git"
+            developerConnection = "scm:git:ssh://github.com/mohamadjaara/mockative.git"
         }
     }
 }

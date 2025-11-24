@@ -28,7 +28,7 @@ kotlin {
     sourceSets {
         val commonTest by getting {
             dependencies {
-                implementation("io.mockative:mockative:$version")
+                implementation("io.github.mohamadjaara:mockative:$version")
             }
         }
     }
@@ -38,6 +38,6 @@ dependencies {
     configurations
         .filter { it.name.startsWith("ksp") && it.name.contains("Test") }
         .forEach {
-            add(it.name, "io.mockative:mockative-processor:$version")
+            add(it.name, "io.github.mohamadjaara:mockative-processor:$version")
         }
 }
