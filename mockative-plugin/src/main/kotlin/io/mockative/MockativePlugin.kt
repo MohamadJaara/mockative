@@ -11,8 +11,7 @@ import java.io.File
 abstract class MockativePlugin : Plugin<Project> {
     // Read version from gradle.properties in the published plugin
     private val version = MockativePlugin::class.java.getResourceAsStream("/mockative-version.txt")
-        ?.bufferedReader()?.use { it.readText().trim() }
-        ?: "3.1.1" // Fallback version
+        ?.bufferedReader()?.use { it.readText().trim() }!!
 
     override fun apply(project: Project) {
         project.pluginManager.apply("com.google.devtools.ksp")
@@ -50,7 +49,7 @@ abstract class MockativePlugin : Plugin<Project> {
         // Add `mockative-processor` as dependency of KSP configurations
         project.configurations.whenObjectAdded { configuration ->
             if (configuration.name != "ksp" && configuration.name.startsWith("ksp")) {
-                project.dependencies.add(configuration.name, "io.mockative:mockative-processor:$version")
+                project.dependencies.add(configuration.name, "io.github.mohamadjaara:mockative-processor:$version")
             }
         }
 
@@ -58,13 +57,13 @@ abstract class MockativePlugin : Plugin<Project> {
         if (project.isMultiplatform) {
             project.kotlinExtension.sourceSets.getByName("commonMain") { sourceSet ->
                 sourceSet.dependencies {
-                    implementation("io.mockative:mockative:$version")
+                    implementation("io.github.mohamadjaara:mockative:$version")
                 }
             }
         } else {
             project.kotlinExtension.sourceSets.getByName("main") { sourceSet ->
                 sourceSet.dependencies {
-                    implementation("io.mockative:mockative:$version")
+                    implementation("io.github.mohamadjaara:mockative:$version")
                 }
             }
         }

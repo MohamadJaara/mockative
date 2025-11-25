@@ -35,7 +35,7 @@ Add the `io.github.mohamadjaara.mockative` plugin and dependency to your **build
 
 ```kotlin
 plugins {
-  id("io.github.mohamadjaara.mockative") version "3.1.3"
+  id("io.github.mohamadjaara.mockative") version "3.1.4"
 }
 
 kotlin {
