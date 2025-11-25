@@ -99,9 +99,14 @@ publishing {
 }
 
 // Ensure all publications use the correct group and version
+// but exclude plugin marker publications which need their own groupId
 afterEvaluate {
     publishing.publications.withType<MavenPublication>().configureEach {
-        groupId = project.group.toString()
+        // Don't override groupId for plugin marker publications
+        // The java-gradle-plugin creates these with groupId matching the plugin ID
+        if (!name.contains("PluginMarkerMaven")) {
+            groupId = project.group.toString()
+        }
         version = project.version.toString()
     }
 }

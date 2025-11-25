@@ -2,7 +2,7 @@
 
 [ksp]: https://github.com/google/ksp
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.mockative/mockative)](https://search.maven.org/artifact/io.mockative/mockative)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.mohamadjaara/mockative)](https://search.maven.org/artifact/io.github.mohamadjaara/mockative)
 
 > [!CAUTION]
 > **This is a temporary maintenance fork.** The original Mockative library is no longer actively maintained.
@@ -31,17 +31,17 @@ Notable features include:
 
 ## Installation for Multiplatform projects
 
-Add the `io.mockative` plugin and dependency to your **build.gradle.kts** file:
+Add the `io.github.mohamadjaara.mockative` plugin and dependency to your **build.gradle.kts** file:
 
 ```kotlin
 plugins {
-  id("io.mockative") version "3.0.1"
+  id("io.github.mohamadjaara.mockative") version "3.1.3"
 }
 
 kotlin {
     commonMain {
         dependencies {
-            implementation("io.mockative:mockative:3.0.1")
+            implementation("io.github.mohamadjaara:mockative:3.1.3")
         }
     }
 }
