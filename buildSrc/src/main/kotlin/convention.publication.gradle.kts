@@ -1,4 +1,5 @@
 import com.vanniktech.maven.publish.SonatypeHost
+import com.vanniktech.maven.publish.KotlinMultiplatform
 import java.util.Properties
 
 plugins {
@@ -43,6 +44,17 @@ mavenPublishing {
         signAllPublications()
     }
 
+    // Only configure KotlinMultiplatform if the kotlin multiplatform plugin is applied
+    pluginManager.withPlugin("org.jetbrains.kotlin.multiplatform") {
+        configure(KotlinMultiplatform())
+    }
+
+    coordinates(
+        groupId = project.group.toString(),
+        artifactId = project.name,
+        version = project.version.toString()
+    )
+
     pom {
         name = "Mockative"
         description = "Mocking framework for Kotlin, Kotlin/Native and Kotlin Multiplatform (Fork)"
@@ -83,5 +95,13 @@ publishing {
             name = "GitHubRelease"
             url = uri("${project.rootProject.projectDir}/release")
         }
+    }
+}
+
+// Ensure all publications use the correct group and version
+afterEvaluate {
+    publishing.publications.withType<MavenPublication>().configureEach {
+        groupId = project.group.toString()
+        version = project.version.toString()
     }
 }
