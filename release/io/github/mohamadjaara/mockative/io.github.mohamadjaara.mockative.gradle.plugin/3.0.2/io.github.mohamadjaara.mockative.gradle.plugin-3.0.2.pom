@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.mohamadjaara.mockative</groupId>
+  <artifactId>io.github.mohamadjaara.mockative.gradle.plugin</artifactId>
+  <version>3.0.2</version>
+  <packaging>pom</packaging>
+  <name>Mockative</name>
+  <description>Mocking framework for Kotlin, Kotlin/Native and Kotlin Multiplatform (Fork)</description>
+  <url>https://github.com/mohamadjaara/mockative</url>
+  <inceptionYear>2021</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://github.com/mohamadjaara/mockative/blob/main/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mohamadjaara</id>
+      <name>Mohamad Jaara</name>
+      <email>mohamadjaara@users.noreply.github.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/mohamadjaara/mockative.git</connection>
+    <developerConnection>scm:git:ssh://github.com/mohamadjaara/mockative.git</developerConnection>
+    <url>https://github.com/mohamadjaara/mockative</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.mohamadjaara</groupId>
+      <artifactId>mockative-plugin</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+  </dependencies>
+</project>

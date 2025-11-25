@@ -1,0 +1,129 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-jvm-3.0.2.jar",
+          "url": "mockative-jvm-3.0.2.jar",
+          "size": 148580,
+          "sha512": "c446f0e5b920d48a31568fe781f1c6a02cb199687e73c7692f33b184ad22ff8253e1ddd07ad25fa84bebb5f1d0bce0ab742a7948f790ffe1bcc3d7a611c1bc9f",
+          "sha256": "95b356a68ae441582854be981f2b0a089d39be94d59e918eec494f857abd08ee",
+          "sha1": "8253198fa1fb72e91416f58d38573958579f65eb",
+          "md5": "8c3cee9e8b330af981b4fd37bece7f8f"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect"
+        },
+        {
+          "group": "org.objenesis",
+          "module": "objenesis",
+          "version": {
+            "requires": "3.3"
+          }
+        },
+        {
+          "group": "org.javassist",
+          "module": "javassist",
+          "version": {
+            "requires": "3.29.2-GA"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-jvm-3.0.2.jar",
+          "url": "mockative-jvm-3.0.2.jar",
+          "size": 148580,
+          "sha512": "c446f0e5b920d48a31568fe781f1c6a02cb199687e73c7692f33b184ad22ff8253e1ddd07ad25fa84bebb5f1d0bce0ab742a7948f790ffe1bcc3d7a611c1bc9f",
+          "sha256": "95b356a68ae441582854be981f2b0a089d39be94d59e918eec494f857abd08ee",
+          "sha1": "8253198fa1fb72e91416f58d38573958579f65eb",
+          "md5": "8c3cee9e8b330af981b4fd37bece7f8f"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "mockative-jvm-3.0.2-sources.jar",
+          "url": "mockative-jvm-3.0.2-sources.jar",
+          "size": 27196,
+          "sha512": "14594ddbd26311e47e9268adcd88ba0f05df1fc08dcbb3b9d5cb291a2a3d63fe8bf5c512640b8bb836801fa07794876d4ee628d5e527260f9dc6c2c99d2a5c61",
+          "sha256": "6a4dace10d4a62e1eea859662624d4e3644fa8e8baccb09944257d4f39a1f4fe",
+          "sha1": "40319f5b224c50e72bef18943f7b63a1585b7147",
+          "md5": "8a538c0f54e8813c4557dd153b6b93d8"
+        }
+      ]
+    }
+  ]
+}

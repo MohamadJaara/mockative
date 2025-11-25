@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.mohamadjaara</groupId>
+  <artifactId>mockative-macosarm64</artifactId>
+  <version>3.0.2</version>
+  <packaging>klib</packaging>
+  <name>Mockative</name>
+  <description>Mocking framework for Kotlin, Kotlin/Native and Kotlin Multiplatform (Fork)</description>
+  <url>https://github.com/mohamadjaara/mockative</url>
+  <inceptionYear>2021</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://github.com/mohamadjaara/mockative/blob/main/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mohamadjaara</id>
+      <name>Mohamad Jaara</name>
+      <email>mohamadjaara@users.noreply.github.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/mohamadjaara/mockative.git</connection>
+    <developerConnection>scm:git:ssh://github.com/mohamadjaara/mockative.git</developerConnection>
+    <url>https://github.com/mohamadjaara/mockative</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>2.2.21</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

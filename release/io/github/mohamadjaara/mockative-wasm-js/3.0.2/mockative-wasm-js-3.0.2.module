@@ -1,0 +1,102 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "wasmJsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-wasm-js-3.0.2.klib",
+          "url": "mockative-wasm-js-3.0.2.klib",
+          "size": 112251,
+          "sha512": "efb6403c9f9f47fb76578ad0f0b3f047d930a992ef5b8a68dd18c0c6e9e4b12858e3fcf06c83e81726fca11deea4f3d9bf4744fd78bee39a5c9a49538a90efc5",
+          "sha256": "a8a788797fb8be5cca83788f7afae511c88eaeaec564579e7f592ec452aa3b02",
+          "sha1": "e26154d957ac037d96c77bc55a4769a125c3686c",
+          "md5": "c49ec084791d25888c98bb6a361157a3"
+        }
+      ]
+    },
+    {
+      "name": "wasmJsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-wasm-js-3.0.2.klib",
+          "url": "mockative-wasm-js-3.0.2.klib",
+          "size": 112251,
+          "sha512": "efb6403c9f9f47fb76578ad0f0b3f047d930a992ef5b8a68dd18c0c6e9e4b12858e3fcf06c83e81726fca11deea4f3d9bf4744fd78bee39a5c9a49538a90efc5",
+          "sha256": "a8a788797fb8be5cca83788f7afae511c88eaeaec564579e7f592ec452aa3b02",
+          "sha1": "e26154d957ac037d96c77bc55a4769a125c3686c",
+          "md5": "c49ec084791d25888c98bb6a361157a3"
+        }
+      ]
+    },
+    {
+      "name": "wasmJsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "files": [
+        {
+          "name": "mockative-wasm-js-3.0.2-sources.jar",
+          "url": "mockative-wasm-js-3.0.2-sources.jar",
+          "size": 26574,
+          "sha512": "72553ab268c38398a3193437f9b2afa5b1b5c6a4493470eb6019bb24516a855dc2999cd0000447f6ade7c6f4b8cfb9948336b9b84d6ef11d5f516432d1bdb777",
+          "sha256": "cbb0287d5f56fabe427b66377cd04b40daf1eec9524c624037751c5b8c779c80",
+          "sha1": "bcf943966b13e930daf3fe34019bd116143e917c",
+          "md5": "65d06c570b1f830d2d4a65d4cde19a34"
+        }
+      ]
+    }
+  ]
+}

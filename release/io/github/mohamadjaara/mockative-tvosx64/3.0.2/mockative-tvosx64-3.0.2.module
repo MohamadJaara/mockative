@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-tvosX64Main-3.0.2.klib",
+          "url": "mockative-tvosx64-3.0.2.klib",
+          "size": 114821,
+          "sha512": "1218e17d5f518ad6c3d77031417bd6dbb004ae1c4e251c05264caef2821b4152c528071c85a02b59f8dfb2d4406c8d85c820178df963606abf1ed86164ee7bb0",
+          "sha256": "c0f355bbb5403d7e33d1a985ee41e847c0552dfe305840cf4df31b46829f0865",
+          "sha1": "ec6b599fd1fe2495f37f668798f61d2b0fbed99b",
+          "md5": "a4376e2da51b104777ea5f43178e2925"
+        }
+      ]
+    },
+    {
+      "name": "tvosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "mockative-tvosx64-3.0.2-sources.jar",
+          "url": "mockative-tvosx64-3.0.2-sources.jar",
+          "size": 26608,
+          "sha512": "b4ac6c450e576befb94a4267ed010f07f4c447379b53b1206409fc46e9da80712529caa31744f6925b34e90e042c896316b7ebf78a2497ffe340acfac8ae542f",
+          "sha256": "812750547df1ca7a8a74577d621ca69d8960aabb07de4c19716b6e3fca7cbdac",
+          "sha1": "ebad7076aef4e9fce66c6dd80426f13ba4b82750",
+          "md5": "9e102d1341eb4f34e6ba7981d7cff88d"
+        }
+      ]
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-tvosx64-3.0.2-metadata.jar",
+          "url": "mockative-tvosx64-3.0.2-metadata.jar",
+          "size": 261,
+          "sha512": "fc790a5e0e6ff754ee191565cb6b38f779bffb305e3e8f1871819ec52da6b51f6602c1be6e6aa68dd068da5e1efa4cf4da0b6cbab94a31fbd883057f685b700c",
+          "sha256": "d1090504e258c6e3861fcba99b350a7bec5ef1ec1d536650eaf8cfd043695a23",
+          "sha1": "1875f7dc6f954820172460c81cc6291f0f530a77",
+          "md5": "7f2cb51948aff476ab4b14565c02de13"
+        }
+      ]
+    }
+  ]
+}

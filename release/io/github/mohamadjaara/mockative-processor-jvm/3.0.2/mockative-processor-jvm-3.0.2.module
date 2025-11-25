@@ -1,0 +1,154 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative-processor/3.0.2/mockative-processor-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative-processor",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-processor-jvm-3.0.2.jar",
+          "url": "mockative-processor-jvm-3.0.2.jar",
+          "size": 79051,
+          "sha512": "399426dd2a06b132db8ad03100a376e91ebf853985dfa28ac6bd3a1091e3e2de8883c0b2f94555506dcf76cda50f342b852d3d19a0b566ed9651ca70dd6f4919",
+          "sha256": "4800c6e326ac296339e5c08396820d48422571342abedd099a842f0aa411d21d",
+          "sha1": "8f53895348ece74e938f8f8b2e8ed4a21915ca9b",
+          "md5": "cd00c136a35d04f93139c47276c9e2d0"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "io.github.mohamadjaara",
+          "module": "mockative",
+          "version": {
+            "requires": "3.0.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib"
+        },
+        {
+          "group": "com.google.devtools.ksp",
+          "module": "symbol-processing-api",
+          "version": {
+            "requires": "2.2.21-2.0.4"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.18.1"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet-ksp",
+          "version": {
+            "requires": "1.18.1"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-processor-jvm-3.0.2.jar",
+          "url": "mockative-processor-jvm-3.0.2.jar",
+          "size": 79051,
+          "sha512": "399426dd2a06b132db8ad03100a376e91ebf853985dfa28ac6bd3a1091e3e2de8883c0b2f94555506dcf76cda50f342b852d3d19a0b566ed9651ca70dd6f4919",
+          "sha256": "4800c6e326ac296339e5c08396820d48422571342abedd099a842f0aa411d21d",
+          "sha1": "8f53895348ece74e938f8f8b2e8ed4a21915ca9b",
+          "md5": "cd00c136a35d04f93139c47276c9e2d0"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "mockative-processor-jvm-3.0.2-sources.jar",
+          "url": "mockative-processor-jvm-3.0.2-sources.jar",
+          "size": 17763,
+          "sha512": "878629143a711bc814607dff4ecf0be1aeb52910209dcbc7e648f2893d3580d272d6ba48223c9975e6a94fb698a2ce9c36877af8363ccf7fa89dc576c7e73c84",
+          "sha256": "e31003142aa33d520c431eb0788d09ef6c2a6aa4555cec449c426952df30fa21",
+          "sha1": "1839cd0ea6d05ad744c9c918c8b7abcb6f9880bb",
+          "md5": "2ae0c4d423e7e102e44fcaa6aec3959c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-iosSimulatorArm64Main-3.0.2.klib",
+          "url": "mockative-iossimulatorarm64-3.0.2.klib",
+          "size": 114892,
+          "sha512": "369be569eedc5aa03084847ac1ec88d3f6138f53e07f4a76ad26bc3bee79bda77241c581012cb5729bac21890531b403efd3d3f7e1fc733efb179f815ca85102",
+          "sha256": "910a6a3cd1acc33f998d95b7e14625f7c13fac6ef80f041ea95863cce17b55cf",
+          "sha1": "5a26e768680e2dc105959cb6b95fafbb100e4cc3",
+          "md5": "d07b7cec307080f790a2616dd855e1bc"
+        }
+      ]
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "mockative-iossimulatorarm64-3.0.2-sources.jar",
+          "url": "mockative-iossimulatorarm64-3.0.2-sources.jar",
+          "size": 26608,
+          "sha512": "b4ac6c450e576befb94a4267ed010f07f4c447379b53b1206409fc46e9da80712529caa31744f6925b34e90e042c896316b7ebf78a2497ffe340acfac8ae542f",
+          "sha256": "812750547df1ca7a8a74577d621ca69d8960aabb07de4c19716b6e3fca7cbdac",
+          "sha1": "ebad7076aef4e9fce66c6dd80426f13ba4b82750",
+          "md5": "9e102d1341eb4f34e6ba7981d7cff88d"
+        }
+      ]
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-iossimulatorarm64-3.0.2-metadata.jar",
+          "url": "mockative-iossimulatorarm64-3.0.2-metadata.jar",
+          "size": 261,
+          "sha512": "6c49bdaf42e2b0157d6c5ba43a422fc4a719af523959ed5d4070c6c6f2c6451cd34a945fe1bc6362a9f98d8086e911bc2c307867f2a1e11e25a21ee9eb7b9ea1",
+          "sha256": "d0d86ef19bf7027d31a42e0f69689e70f4706076db763655fad73341b02a7891",
+          "sha1": "1deddff8aba96755d42d9da314ea703e2b78d8b8",
+          "md5": "5c5814adefc12b7be29e845e1a67d27a"
+        }
+      ]
+    }
+  ]
+}

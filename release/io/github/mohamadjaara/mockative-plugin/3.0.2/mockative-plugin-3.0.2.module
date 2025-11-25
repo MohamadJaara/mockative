@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.mohamadjaara",
+    "module": "mockative-plugin",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-plugin-3.0.2.jar",
+          "url": "mockative-plugin-3.0.2.jar",
+          "size": 25884,
+          "sha512": "8795b870db16c8c59312ed2b15b23dece18b5bd6eed081f0bb21bcb88a1f2e871c269fe74f7c3aad1a91c2cbfe044eba91a38bc549f4c4b44eb1595f87290d17",
+          "sha256": "eca77a954e02cbb160de25b213b8cb055ebd69dbb69a9c57926c8ca54d006541",
+          "sha1": "9f8811bb7237a3a84031e285dcf29c0421f1d999",
+          "md5": "49499a1474553dc80d3f373b54482966"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-allopen",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "8.5.2"
+          }
+        },
+        {
+          "group": "com.google.devtools.ksp",
+          "module": "symbol-processing-gradle-plugin",
+          "version": {
+            "requires": "2.2.21-2.0.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-plugin-3.0.2.jar",
+          "url": "mockative-plugin-3.0.2.jar",
+          "size": 25884,
+          "sha512": "8795b870db16c8c59312ed2b15b23dece18b5bd6eed081f0bb21bcb88a1f2e871c269fe74f7c3aad1a91c2cbfe044eba91a38bc549f4c4b44eb1595f87290d17",
+          "sha256": "eca77a954e02cbb160de25b213b8cb055ebd69dbb69a9c57926c8ca54d006541",
+          "sha1": "9f8811bb7237a3a84031e285dcf29c0421f1d999",
+          "md5": "49499a1474553dc80d3f373b54482966"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mockative-plugin-3.0.2-sources.jar",
+          "url": "mockative-plugin-3.0.2-sources.jar",
+          "size": 8248,
+          "sha512": "69eb87161405dd6567b9c93312cae9934c6945902396a3708286364416760fbca7f8fb706fcd446061a1e66086a55a88ad28780e7f8cf31fb147ee84542163f7",
+          "sha256": "86995e2b9701c9096ee6caabe9078b025ea4bf00aab1896cf17bd4d50f6e784a",
+          "sha1": "0692560e43540385d8f1a87ee9a7b5e979e9ce1d",
+          "md5": "653bcca4032bf2531b5c8314f46bd4a8"
+        }
+      ]
+    }
+  ]
+}

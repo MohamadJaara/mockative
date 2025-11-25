@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "watchosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-watchosArm32Main-3.0.2.klib",
+          "url": "mockative-watchosarm32-3.0.2.klib",
+          "size": 114851,
+          "sha512": "4a1a09d78d6a8ce1c0fd3836e54cd01d1f33d52ef41a08264ece7d8b115102419aa4b85697fa2b924ebf501754133373516cf6a3dcaf04227a515c2352961321",
+          "sha256": "01510e053eee5f145534a094f879b5a3be97243d20fec021fc55d66cdb989f93",
+          "sha1": "17fe9fe2216852644293412caf35bcb28223d344",
+          "md5": "5541c5b03506bb1938c558bafc4f0c8b"
+        }
+      ]
+    },
+    {
+      "name": "watchosArm32SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "mockative-watchosarm32-3.0.2-sources.jar",
+          "url": "mockative-watchosarm32-3.0.2-sources.jar",
+          "size": 26608,
+          "sha512": "b4ac6c450e576befb94a4267ed010f07f4c447379b53b1206409fc46e9da80712529caa31744f6925b34e90e042c896316b7ebf78a2497ffe340acfac8ae542f",
+          "sha256": "812750547df1ca7a8a74577d621ca69d8960aabb07de4c19716b6e3fca7cbdac",
+          "sha1": "ebad7076aef4e9fce66c6dd80426f13ba4b82750",
+          "md5": "9e102d1341eb4f34e6ba7981d7cff88d"
+        }
+      ]
+    },
+    {
+      "name": "watchosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-watchosarm32-3.0.2-metadata.jar",
+          "url": "mockative-watchosarm32-3.0.2-metadata.jar",
+          "size": 261,
+          "sha512": "14a0f3a82fb0cf260f115a6f3f2900b1506cd087bc04c5483f0434f8d79dd9748c0f963bc120c087b40bc34cfd4e67c5d5d69ac68a839e58b1ae125cd48c2a4c",
+          "sha256": "4b5c1a3f2c94dbe1e44d5891ea153fbe8439f5474928d09b928551bde162990b",
+          "sha1": "4ead9e6a998e6a736f6df3f0a4fc987c3c546048",
+          "md5": "075761c6381aa7a24ec62765602c6ce9"
+        }
+      ]
+    }
+  ]
+}

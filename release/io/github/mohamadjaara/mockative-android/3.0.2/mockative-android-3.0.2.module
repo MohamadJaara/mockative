@@ -1,0 +1,183 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-release.aar",
+          "url": "mockative-android-3.0.2.aar",
+          "size": 139051,
+          "sha512": "0f33794a99ae3904239f55384a015bd6e0171bb57947ca3d09771a795c076c8137ac8cec9771cebe8782e703aa94efd479545d091cd13d340cf4bad0d43f6271",
+          "sha256": "07df72f30bb817e8d35c8fce956ede3d1f4425c38813adec3f3ff01fb81df125",
+          "sha1": "8049eea5bcc754603923ec7e152032813b25a621",
+          "md5": "0e1d06f101d5f9d7c963bbc679302296"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.objenesis",
+          "module": "objenesis",
+          "version": {
+            "requires": "3.3"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.javassist",
+          "module": "javassist",
+          "version": {
+            "requires": "3.29.2-GA"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-release.aar",
+          "url": "mockative-android-3.0.2.aar",
+          "size": 139051,
+          "sha512": "0f33794a99ae3904239f55384a015bd6e0171bb57947ca3d09771a795c076c8137ac8cec9771cebe8782e703aa94efd479545d091cd13d340cf4bad0d43f6271",
+          "sha256": "07df72f30bb817e8d35c8fce956ede3d1f4425c38813adec3f3ff01fb81df125",
+          "sha1": "8049eea5bcc754603923ec7e152032813b25a621",
+          "md5": "0e1d06f101d5f9d7c963bbc679302296"
+        }
+      ]
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "mockative-android-3.0.2-sources.jar",
+          "url": "mockative-android-3.0.2-sources.jar",
+          "size": 27260,
+          "sha512": "e39f9942a92732f210ecdd7d704a0709c0f5e67553b1b1d68c00bc85b6bda99b42e01c4e739d19aa811c098708a28ff235ce1e7d8fce4f8d57533ef92433cccb",
+          "sha256": "954f761a6161d97b005fe82d504328363015e65858b13a3664bd1f886c009afe",
+          "sha1": "f55bbd5f290037465d393902a6e0d7761ad834e4",
+          "md5": "7b366b2f3d2bbb732191b70f9478f405"
+        }
+      ]
+    }
+  ]
+}

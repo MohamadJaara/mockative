@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-dom-api-compat",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-js-3.0.2.klib",
+          "url": "mockative-js-3.0.2.klib",
+          "size": 112253,
+          "sha512": "5a0d8a16900a6b3ea5cd5aefaf8714c105e53fb4a2a165dae66e6056b78a5438419323df4c7beb95c11ca66ee96de578bd34c2df9233415e0b9e5f83354445f0",
+          "sha256": "b08869e8f7674bf03d71ea055e51c0c3f4b435a2f10632fd3db1bf5461efa600",
+          "sha1": "40f4338e46efe161d853b158360872cd6dc478a0",
+          "md5": "f65d4c840bbd9d7d8d40110f91750da1"
+        }
+      ]
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-dom-api-compat",
+          "version": {
+            "requires": "2.2.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-js-3.0.2.klib",
+          "url": "mockative-js-3.0.2.klib",
+          "size": 112253,
+          "sha512": "5a0d8a16900a6b3ea5cd5aefaf8714c105e53fb4a2a165dae66e6056b78a5438419323df4c7beb95c11ca66ee96de578bd34c2df9233415e0b9e5f83354445f0",
+          "sha256": "b08869e8f7674bf03d71ea055e51c0c3f4b435a2f10632fd3db1bf5461efa600",
+          "sha1": "40f4338e46efe161d853b158360872cd6dc478a0",
+          "md5": "f65d4c840bbd9d7d8d40110f91750da1"
+        }
+      ]
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "files": [
+        {
+          "name": "mockative-js-3.0.2-sources.jar",
+          "url": "mockative-js-3.0.2-sources.jar",
+          "size": 26518,
+          "sha512": "9040909e9d1e520312a6e75e59273f2e2d724af845011b8fedc57a6fcdc4bb9f5698774531896118f6d01d445a1d84c4b6d227310fe61ecd7744e99bba0f945f",
+          "sha256": "fed19d6ffd6206fc21f7cb99079b62cc99f0a1dd0ac6476cc97ac4fcc156ba3e",
+          "sha1": "a7d5ac9c8dd58abe9e9482224edd5e8582d32035",
+          "md5": "cbe1d926be15991c2ddd17b79a916b73"
+        }
+      ]
+    }
+  ]
+}

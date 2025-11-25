@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../mockative/3.0.2/mockative-3.0.2.module",
+    "group": "io.github.mohamadjaara",
+    "module": "mockative",
+    "version": "3.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-macosArm64Main-3.0.2.klib",
+          "url": "mockative-macosarm64-3.0.2.klib",
+          "size": 114840,
+          "sha512": "5699d11c613039be288fbf8187363f1f4acafbf05b0da0549861939d608b57e83fc42fc47de61e8d78544560a1c25badf72611b2a98f3afb845b8b66e13010b0",
+          "sha256": "28ac2a68824c393633b165d20d9b1a85207572ae2236c0f36d665a2a493a0679",
+          "sha1": "2f408c859961375cc84e6671e6286523908418fa",
+          "md5": "57e67773a91c02ea528e4e7315884dd6"
+        }
+      ]
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "mockative-macosarm64-3.0.2-sources.jar",
+          "url": "mockative-macosarm64-3.0.2-sources.jar",
+          "size": 26608,
+          "sha512": "b4ac6c450e576befb94a4267ed010f07f4c447379b53b1206409fc46e9da80712529caa31744f6925b34e90e042c896316b7ebf78a2497ffe340acfac8ae542f",
+          "sha256": "812750547df1ca7a8a74577d621ca69d8960aabb07de4c19716b6e3fca7cbdac",
+          "sha1": "ebad7076aef4e9fce66c6dd80426f13ba4b82750",
+          "md5": "9e102d1341eb4f34e6ba7981d7cff88d"
+        }
+      ]
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mockative-macosarm64-3.0.2-metadata.jar",
+          "url": "mockative-macosarm64-3.0.2-metadata.jar",
+          "size": 261,
+          "sha512": "9ea1e6b39860a44a296a68134cd865dc660e5c38a2aac45f946dfb0f3c930774e6ade1466f5518d0c384d7b207d345e84ecd4c63f591e0505a2c1d5dba430b3c",
+          "sha256": "4f50c96e47ce1b7b06aac8fb01d9fa0a817fcbb7d7c7c4ec8750f7f81b4fffed",
+          "sha1": "daa9b713afeb5a2202cf49c3a6982b6620fcfe71",
+          "md5": "abc45248e29d8b6474cbbf6c48536bd4"
+        }
+      ]
+    }
+  ]
+}
