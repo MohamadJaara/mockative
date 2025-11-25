@@ -69,7 +69,7 @@ gradlePlugin {
 
     plugins {
         create("mockative") {
-            id = "io.mockative"
+            id = "io.github.mohamadjaara.mockative"
             displayName = "Mockative Gradle Plugin (Fork)"
             description = "Gradle Plugin for Mockative (Fork)"
             tags = listOf("testing", "mocking", "mock", "kmp", "native")
