@@ -35,8 +35,26 @@ val copySourcesToResources by tasks.registering(Copy::class) {
     into("src/main/resources/src/")
 }
 
+val generateVersionFile by tasks.registering {
+    val outputDir = layout.buildDirectory.dir("generated/resources")
+    outputs.dir(outputDir)
+
+    doLast {
+        val versionFile = outputDir.get().file("mockative-version.txt").asFile
+        versionFile.parentFile.mkdirs()
+        versionFile.writeText(project.version.toString())
+    }
+}
+
+sourceSets {
+    main {
+        resources.srcDir(generateVersionFile)
+    }
+}
+
 tasks.named("processResources") {
     dependsOn(copySourcesToResources)
+    dependsOn(generateVersionFile)
 }
 
 tasks.whenObjectAdded {
