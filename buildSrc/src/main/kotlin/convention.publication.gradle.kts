@@ -22,6 +22,9 @@ val signingKey = prop("signing.key")
 val signingPassword = prop("signing.password")
 val signingEnabled = signingKeyId != null && signingKey != null
 
+logger.lifecycle("Signing configuration: keyId=${signingKeyId?.take(4)}..., key=${if (signingKey != null) "${signingKey.length} chars" else "null"}, password=${if (signingPassword != null) "set" else "null"}")
+logger.lifecycle("Signing enabled: $signingEnabled")
+
 // Configure signing BEFORE mavenPublishing block
 if (signingEnabled) {
     signing {
