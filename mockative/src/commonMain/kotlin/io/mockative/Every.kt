@@ -7,6 +7,9 @@ package io.mockative
  * @return a [ResultBuilder] object, which allows further configuration of the recorded invocation.
  */
 fun <R> every(block: () -> R): ResultBuilder<R> {
+    // Clear any leftover matchers from previous operations to prevent MixedArgumentMatcherException
+    // for no-arg functions when spurious matchers remain in the global queue (especially on Native)
+    Matchers.clear()
     try {
         val (mock, invocation) = MockState.record(block)
         val expectation = invocation.toExpectation()
@@ -24,6 +27,9 @@ fun <R> every(block: () -> R): ResultBuilder<R> {
  * invocation.
  */
 suspend fun <R> coEvery(block: suspend () -> R): SuspendResultBuilder<R> {
+    // Clear any leftover matchers from previous operations to prevent MixedArgumentMatcherException
+    // for no-arg functions when spurious matchers remain in the global queue (especially on Native)
+    Matchers.clear()
     try {
         val (mock, invocation) = MockState.record(block)
         val expectation = invocation.toExpectation()

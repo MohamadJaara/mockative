@@ -9,13 +9,27 @@ fun verifyNoUnmetExpectations(receiver: Any) {
 }
 
 fun <R> verify(block: () -> R): Verification {
-    val (mock, invocation) = MockState.record(block)
-    val expectation = invocation.toExpectation()
-    return Verification(mock, expectation)
+    // Clear any leftover matchers from previous operations to prevent MixedArgumentMatcherException
+    // for no-arg functions when spurious matchers remain in the global queue (especially on Native)
+    Matchers.clear()
+    try {
+        val (mock, invocation) = MockState.record(block)
+        val expectation = invocation.toExpectation()
+        return Verification(mock, expectation)
+    } finally {
+        Matchers.clear()
+    }
 }
 
 suspend fun <R> coVerify(block: suspend () -> R): Verification {
-    val (mock, invocation) = MockState.record(block)
-    val expectation = invocation.toExpectation()
-    return Verification(mock, expectation)
+    // Clear any leftover matchers from previous operations to prevent MixedArgumentMatcherException
+    // for no-arg functions when spurious matchers remain in the global queue (especially on Native)
+    Matchers.clear()
+    try {
+        val (mock, invocation) = MockState.record(block)
+        val expectation = invocation.toExpectation()
+        return Verification(mock, expectation)
+    } finally {
+        Matchers.clear()
+    }
 }
