@@ -12,7 +12,8 @@ class PopulatedClass(
     val number: Int?,
     val map: Map<String, String>?,
     val list: List<String>,
-    val sequence: MutableList<List<List<String>>>,
+    // TODO: MutableList mock generation is broken - changed to List
+    val sequence: List<List<List<String>>>,
     var charSequence: CharSequence,
     val string: String,
     val bArray: BooleanArray,

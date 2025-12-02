@@ -1,6 +1,7 @@
 package io.mockative
 
 import io.mockative.concurrency.AtomicList
+import io.mockative.concurrency.AtomicRef
 import io.mockative.concurrency.AtomicSet
 import io.mockative.concurrency.atomic
 import kotlin.native.concurrent.ThreadLocal
@@ -263,18 +264,91 @@ class MockState(val instance: Any) {
 
     companion object {
         /**
-         * While we're definitely leaking memory for every mocked instance here, we're doing so as a temporary measure
-         * until we re-implement in-instance state. Since test processes are short-lived this shouldn't be an issue in
-         * any application.
+         * Thread-safe map of mock instances to their state, using atomic copy-on-write semantics.
+         * This ensures safe concurrent access on Kotlin/Native where the old memory model
+         * required explicit thread synchronization.
          */
-        private val mocks = mutableMapOf<ByRef, MockState>()
+        private val mocksRef = AtomicRef<Map<ByRef, MockState>>(emptyMap())
+
+        /**
+         * Thread-safe helper to mutate the mocks map using compare-and-set.
+         */
+        private inline fun <R> mutateMocks(block: (MutableMap<ByRef, MockState>) -> R): R {
+            while (true) {
+                val currentValue = mocksRef.value
+                val nextValue = currentValue.toMutableMap()
+                val result = block(nextValue)
+                if (mocksRef.compareAndSet(currentValue, nextValue)) {
+                    return result
+                }
+            }
+        }
 
         internal fun mock(instance: Any): MockState {
             if (!isMock(instance)) {
                 throw ReceiverNotMockedException(instance)
             }
 
-            return mocks.getOrPut(ByRef(instance)) { MockState(instance) }
+            val key = ByRef(instance)
+
+            // Fast path: check if already exists
+            mocksRef.value[key]?.let { return it }
+
+            // Slow path: create new MockState atomically
+            return mutateMocks { mocks ->
+                mocks.getOrPut(key) { MockState(instance) }
+            }
+        }
+
+        /**
+         * Disposes a single mock instance, removing it from the internal registry and releasing
+         * all associated state including stubs and recorded invocations.
+         *
+         * This is particularly important on Kotlin/Native when mocking interfaces that wrap
+         * native resources (e.g., crypto libraries), as it ensures mock state doesn't hold
+         * references to potentially freed native memory.
+         *
+         * Usage in tests:
+         * ```
+         * @AfterTest
+         * fun cleanup() {
+         *     dispose(myMock)
+         * }
+         * ```
+         *
+         * @param instance The mock instance to dispose
+         * @return true if the mock was found and disposed, false if it wasn't registered
+         */
+        fun dispose(instance: Any): Boolean {
+            val key = ByRef(instance)
+            return mutateMocks { mocks ->
+                val state = mocks.remove(key)
+                state?.reset()
+                state != null
+            }
+        }
+
+        /**
+         * Disposes all mock instances, clearing the entire internal registry.
+         *
+         * This is useful for cleaning up all mocks in a test suite's teardown phase,
+         * especially on Kotlin/Native where mock state can hold references to native resources.
+         *
+         * Usage in tests:
+         * ```
+         * @AfterTest
+         * fun cleanup() {
+         *     disposeAll()
+         * }
+         * ```
+         *
+         * This method is thread-safe and can be called from any thread.
+         */
+        fun disposeAll() {
+            mutateMocks { mocks ->
+                mocks.values.forEach { it.reset() }
+                mocks.clear()
+            }
         }
 
         fun <R> invoke(instance: Any, invocation: Invocation, returnsUnit: Boolean, spy: (() -> R)?): R {

@@ -3,7 +3,7 @@ plugins {
 
     id("com.android.library")
 
-    id("io.github.mohamadjaara.mockative") version findProperty("project.version") as String
+    id("io.github.mohamadjaara.mockative") version "3.1.6"
     id("io.gitlab.arturbosch.detekt") version "1.23.7"
 }
 
